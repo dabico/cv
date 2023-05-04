@@ -1,0 +1,140 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{grey}
+\moderncvicons{marvosym}
+
+\usepackage{worldflags}
+\usepackage[
+    scale=0.75,
+    noheadfoot,
+    nomarginpar,
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.75cm,
+    right=1.75cm,
+    % showframe, % uncomment to show how the type block is set on the page
+]{geometry}
+
+\setlength{\footskip}{37pt}
+
+\firstname{Ozren}
+\familyname{Dabić}
+\title{Curriculum vitae}
+\phone[mobile]{+41~(0)~76~494~08~86}
+\email{dabico@usi.ch}
+\homepage{https://dabico.github.io/}
+\social[linkedin]{dabico}
+\social[github]{dabico}
+\photo[64pt][0.4pt]{picture}
+
+\nopagenumbers{}
+
+\newcommand{\vspacesmall}{\vspace{0.2cm}}
+\newcommand{\cvskillscategoryitems}[2]{\cvitem{\textbf{#1}}{#2}}
+\newcommand{\smallflag}[1]{\worldflag[width=1cm,length=1.5cm,stretch=1,emblemdefault]{#1}}
+\newcommand{\cvlanguageskill}[3][0.2]{
+    \begin{minipage}{#1\textwidth}%
+    \centering%
+    \smallflag{#2}\\%
+    \small{#3}%
+    \end{minipage}%
+}
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Experience}
+
+\subsection{Vocational}
+\cventry{2022--Now}
+{Research Assistant}
+{\httplink[Software Institute]{www.si.usi.ch}}
+{Lugano, Switzerland}{}
+{
+    Aiding the Software Analytics Research Team (SEART)
+    in conducting research on the usage of machine learning
+    for automation of software development processes.
+    This includes creating tools for, and participating in
+    empirical studies, while expanding, improving and
+    maintaining various web platforms, applications and
+    software libraries created during both university studies
+    and employment.
+}
+
+\subsection{Internships}
+\cventry{2019}
+{Back-end Developer}
+{\httplink[Ex Machina]{exmachina.ch}}
+{Lugano, Switzerland}{}
+{
+    Was part of a small team tasked with extending
+    and maintaining an internal client-management
+    web platform for the Zürich-based venture capital
+    firm \em{Planven Entrepreneur Ventures}.
+}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}
+
+\section{Education}
+
+\cventry{2020--2022}{MSc in Software and Data Engineering}
+{\newline{}USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{\textit{GPA: 9.66/10}}
+{}
+
+\cventry{2017--2020}{BSc in Computer Science}
+{\newline{}USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{\textit{GPA: 8.25/10}}
+{}
+
+\vspacesmall
+\begin{minipage}[t]{0.5\textwidth}
+    \section{Industry Knowledge}
+
+    \cvlistitem{Full-Stack Development}
+    \cvlistitem{Database Design}
+    \cvlistitem{Data Analysis}
+    \cvlistitem{Data Mining}
+    % \cvlistitem{Academic Advising}
+    % \cvlistitem{Research}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \section{Developer Skills}
+
+    \cvskillscategoryitems{Languages}{Java, JavaScript, Python}
+    \cvskillscategoryitems{Framewroks}{Spring Boot, Bootstrap, Vue}
+    \cvskillscategoryitems{Databases}{MySQL, PostgreSQL, MongoDB}
+    \cvskillscategoryitems{Tools}{Git, Docker, Flyway, Maven}
+\end{minipage}
+
+\vspacesmall
+\begin{minipage}[t]{0.5\textwidth}
+    \section{Languages}
+
+    \cvlanguageskill{RS}{Native}
+    \cvlanguageskill{GB}{Native}
+    \cvlanguageskill[0.25]{DE}{Intermediate}
+    \cvlanguageskill{IT}{Basic}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \section{Interests}
+
+    Gym $\cdot$
+    Hiking $\cdot$
+    Cycling $\cdot$
+    Gardening %$\cdot$
+
+    Cooking $\cdot$
+    Electronic Music $\cdot$
+    Video Games
+\end{minipage}
+
+\end{document}
