@@ -1,0 +1,203 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{grey}
+\moderncvicons{marvosym}
+
+\usepackage[utf8]{inputenc}
+\usepackage{anyfontsize}
+\usepackage{worldflags}
+\usepackage[
+    scale=0.75,
+    noheadfoot,
+    nomarginpar,
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.75cm,
+    right=1.75cm,
+    % showframe, % uncomment to show how the type block is set on the page
+]{geometry}
+\recomputelengths
+
+\setlength{\footskip}{37pt}
+
+\firstname{Ozren}
+\familyname{Dabić}
+\title{Software Engineer}
+\phone[mobile]{+41~(0)~76~494~78~86}
+\email{ozren.dabic@usi.ch}
+\homepage{dabico.github.io}
+\social[linkedin]{dabico}
+\social[github]{dabico}
+
+\nopagenumbers{}
+
+\newcommand{\vspacesmall}{\vspace{0.2cm}}
+\newcommand{\cvskillscategoryitems}[2]{\cvitem{\textbf{#1}}{#2}}
+\newcommand{\smallflag}[1]{\worldflag[width=1cm,length=1.5cm,stretch=1,emblemdefault]{#1}}
+\newcommand{\cvlanguageskill}[3][0.2]{
+    \begin{minipage}{#1\textwidth}%
+    \centering%
+    \smallflag{#2}\\%
+    \small{#3}%
+    \end{minipage}%
+}
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\begin{document}
+
+\makecvtitle
+
+\section{About}
+
+I specialize in crafting robust, adaptable solutions with meticulous attention to detail.
+Although comfortable working as a \textbf{full-stack developer}, my focus is primarily on
+\textbf{back-end development} and \textbf{infrastructure maintenance}.
+With a dedication to both code quality and maintainability,
+I strive to create efficient software that withstands the test of time,
+offering high configurability and applicability across diverse contexts.
+Fueled by curiosity,
+I continuously seek to improve my skills and tackle complex challenges head-on.
+While I am dedicated and methodical,
+as demonstrated by my strict adherence to the best practices of \textbf{software development},
+I do not shy away from creative thinking and exploring unconventional solutions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\cventry{Oct 2022 -- Present~~}
+{Research Assistant \& Software Engineer}
+{\httpslink[Software Institute]{si.usi.ch}}
+{Lugano, Switzerland}{}
+{
+    Aiding the \httpslink[Software Analytics Research Team]{seart.si.usi.ch}
+    (SEART) in conducting research on the usage of machine learning for automation of
+    software development processes. This includes creating tools for, and
+    conducting empirical studies, while expanding, improving and maintaining
+    various web platforms, applications and libraries created while working
+    with the group.
+}
+\cvlistitem{
+    Worked on \httpslink[\textbf{GitHub Search}]{seart-ghs.si.usi.ch},
+    a web platform that continiously mines and analyzes open-source
+    projects on GitHub while providing users with an interface for
+    dynamically generating a dataset by sampling our database based
+    on their specific requirements.
+}
+\cvlistitem{
+    Orchestrated development of \httpslink[\textbf{DL4SE}]{seart-dl4se.si.usi.ch},
+    a web platform that facilitates large-scale mining of source code from open
+    source projects hosted on GitHub. Researchers can utilize its intuitive interface
+    to define criteria for selecting code and then download the generated dataset
+    in order to train deep learning models that work with code.
+}
+\cvlistitem{
+    Created \httpslink[\textbf{labeler}]{github.com/seart-group/labeler},
+    a web application with which researchers can quickly set up and perform
+    collaborative manual analysis of text data. It is intended to streamline
+    the process of reviewing instances, resolving conflicts and producing a
+    study report.
+}
+\cvlistitem{
+    Implemented a \httpslink[\textbf{Java binding for \texttt{tree-sitter}}]
+    {github.com/seart-group/java-tree-sitter}, an incremental parsing library
+    written in C. It is used in other projects for performing static analysis
+    on mined source code.
+}
+\cvlistitem{
+    Established crucial automated infrastructure, including database backups,
+    project dependency updates, code quality checks, and Docker image builds and deployments.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Internships}
+\cventry{Sept -- Dec 2019}
+{Back-end Developer}
+{\httpslink[Ex Machina]{exmachina.ch}}
+{Lugano, Switzerland}{}
+{
+    Was part of a small team of developers tasked with extending and maintaining
+    a client-management web platform developed for, and used internally by the Zürich-based
+    venture capital firm \httpslink[Planven Entrepreneur Ventures]{planvenev.com}.
+}
+\cvlistitem{
+    Elevated platform search capabilities by emphasizing dynamically
+    constructed SQL queries. This enhancement significantly boosted
+    the flexibility of the platform without compromising performance
+    or security.
+}
+\cvlistitem{
+    Implemented a system that facilitates the tracking of industries,
+    allowing for dynamic addition, removal, and assignment of companies
+    to specific sectors.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\cventry{Sep 2020 -- Oct 2022~~}{Master of Science in Software and Data Engineering}
+{\newline{}USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{\textit{GPA: 9.66/10}}
+{}
+\cventry{Sep 2017 -- Jun 2020~~}{Bachelor of Science in Computer Science}
+{\newline{}USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{\textit{GPA: 8.25/10}}
+{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Supervising}
+
+\cventry{Spring 2024}
+{A Platform to Mine Large-Scale and High-Quality Datasets for Code Review Automation}
+{Software and Data Engineering Master Thesis}
+{Christelle Rossier}{}{}
+\cventry{Spring 2023}
+{Sampling Open Source Repositories by Mining Code-related Metrics and Repository Topics}
+{Computer Science Bachelor Thesis}
+{Albert Cerfeda}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\cvskillscategoryitems{Prog. Lang:}{\textbf{Java}, \textbf{JavaScript}, \textbf{Python}, \textbf{C}, \textbf{Bash}, \textbf{SASS}}
+\cvskillscategoryitems{Framewroks:}{\textbf{Spring Boot}, \textbf{Express.js}, \textbf{Vue}, \textbf{Bootstrap}}
+\cvskillscategoryitems{Databases:}{\textbf{MySQL}, \textbf{PostgreSQL}, \textbf{MongoDB}}
+\cvskillscategoryitems{Automation:}{\textbf{Maven}, \textbf{Flyway}, \textbf{Liquibase}, \textbf{GitHub Actions}}
+\cvskillscategoryitems{Analysis:}{\textbf{Jupyter Notebook}, \textbf{Pandas}, \textbf{Bokeh}}
+\cvskillscategoryitems{Tools:}{\textbf{Git}, \textbf{Docker}, \textbf{Docker Compose}, \textbf{NGINX}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spoken Languages}
+\cvskillscategoryitems{English:}{\textbf{C2}}
+\cvskillscategoryitems{German:}{\textbf{B2}}
+\cvskillscategoryitems{Italian:}{\textbf{A1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References}
+\cventry{}{Prof. Dr. Gabriele Bavota}
+{\newline{}Head of the Software Analytics Research Team}
+{\newline{}\texttt{\httplink{https://www.inf.usi.ch/faculty/bavota}}}
+{\newline{}\emaillink{gabriele.bavota@usi.ch}}
+{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Interests}
+% \cvlistitem{ASCII Art}
+% \cvlistitem{Electronic Music}
+% \cvlistitem{Free Open Source Software}
+
+\end{document}
