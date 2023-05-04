@@ -1,0 +1,229 @@
+\documentclass[12pt,a4paper,sans]{moderncv}
+
+\moderncvcolor{grey}
+\moderncvstyle{classic}
+
+\usepackage[utf8]{inputenc}
+\usepackage{anyfontsize}
+\usepackage[
+    scale=0.75,
+    noheadfoot,
+    nomarginpar,
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.75cm,
+    right=1.75cm,
+    % showframe, % uncomment to show how the type block is set on the page
+]{geometry}
+\recomputelengths
+
+\setlength{\footskip}{37pt}
+
+\firstname{Ozren}
+\familyname{Dabić}
+\title{Software Developer in Research}
+\email{dabico@jetbrains.com}
+\homepage{dabico.github.io}
+\social[linkedin]{dabico}
+\social[github]{dabico}
+\social[telegram]{dabico}
+
+\nopagenumbers{}
+
+\newcommand{\vspacesmall}{\vspace{0.2cm}}
+\newcommand{\cvskillitem}[2]{\cvitem{\textbf{#1}:}{#2}}
+\newcommand{\cveducationitem}[5]{
+    \cventry{#1~~}{#2}{\newline{}#3}{#4}{\textit{GPA: #5/10}}{}
+}
+\newcommand{\cvsupervisingitem}[4]{
+    \cventry{#1}{#2}{#3}{#4}{}{}
+}
+\newcommand{\cvlanguageitem}{\cvskillitem}
+\newcommand{\cvlanguagedoubleitem}[4]{
+    \cvdoubleitem{\textbf{#1:}}{\texttt{#2}}{\textbf{#3:}}{\texttt{#4}}
+}
+
+\newcommand{\cvreference}[4]{
+    \cventry{}{#1}
+    {\newline{}#2}
+    {\newline{}\texttt{\httpslink{#3}}}
+    {\newline{}\emaillink{#4}}
+    {}
+}
+
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+\begin{document}
+
+\makecvtitle
+
+\section{About}
+
+I specialize in crafting robust, adaptable solutions with meticulous attention
+to detail. Although comfortable working as a \textbf{full-stack developer}, my
+focus is primarily on \textbf{back-end development} and \textbf{infrastructure maintenance}.
+With a dedication to both code quality and maintainability, I strive to create
+efficient software that withstands the test of time, offering high configurability
+and applicability across diverse contexts. Fueled by curiosity, I continuously
+seek to improve my skills and tackle complex challenges head-on. While I am
+dedicated and methodical, as demonstrated by my strict adherence to the best
+practices of \textbf{software development}, I do not shy away from creative
+thinking and exploring unconventional solutions.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\cventry{Oct 2024 -- Present~~}
+{Software Developer}
+{\httpslink[JetBrains Research]{jetbrains.com/research}}
+{Belgrade, Serbia}{}
+{
+    Working cross-team, as part of the Engineering Squad within the Software
+    Engineering Research department. Helping researchers create prototypes of
+    their work for product teams.
+}
+
+\cventry{Oct 2022 -- Oct 2024~~}
+{Research Assistant \& Software Engineer}
+{\httpslink[Software Institute]{si.usi.ch}}
+{Lugano, Switzerland}{}
+{
+    Aiding the \httpslink[Software Analytics Research Team]{seart.si.usi.ch}
+    (SEART) in conducting research on the usage of machine learning for automation
+    of software development processes. This includes creating tools for, and
+    conducting empirical studies, while expanding, improving and maintaining
+    various web platforms, applications and libraries created while working
+    with the group.
+}
+\cvlistitem{
+    Worked on \httpslink[\textbf{GitHub Search}]{seart-ghs.si.usi.ch}, a web
+    platform that continiously mines and analyzes open-source projects on GitHub
+    while providing users with an interface for dynamically generating a dataset
+    by sampling our database based on their specific requirements.
+}
+\cvlistitem{
+    Orchestrated development of \httpslink[\textbf{Data Hub}]{seart-dh.si.usi.ch},
+    a web platform that facilitates large-scale mining of source code from open
+    source projects hosted on GitHub. Researchers can utilize its intuitive
+    interface to define criteria for selecting code and then download the
+    generated dataset in order to train deep learning models that work with code.
+}
+\cvlistitem{
+    Created \httpslink[\textbf{labeler}]{github.com/seart-group/labeler}, a web
+    application with which researchers can quickly set up and perform collaborative
+    manual analysis of text data. It is intended to streamline the process of
+    reviewing instances, resolving conflicts and producing a study report.
+}
+\cvlistitem{
+    Implemented \textbf{Java bindings for \httpslink[\texttt{tree-sitter}]
+    {github.com/seart-group/java-tree-sitter} and \httpslink[\texttt{CLOC}]
+    {github.com/seart-group/jcloc}}, used in other projects for performing
+    static analysis on mined code.
+}
+\cvlistitem{
+    Established crucial automated infrastructure, including database backups,
+    project dependency updates, code quality checks, and Docker image builds
+    and deployments.
+}
+
+\cventry{Sept 2019 -- Dec 2019~~}
+{Back-end Developer}
+{\httpslink[Ex Machina]{exmachina.ch}}
+{Lugano, Switzerland}{}
+{
+    Was part of a development team tasked with extending and maintaining a
+    client-management web platform developed for, and used internally by the
+    Zürich-based venture capital firm \httpslink[Planven Entrepreneur Ventures]
+    {planvenev.com}.
+}
+\cvlistitem{
+    Elevated platform search capabilities by emphasizing dynamically constructed
+    SQL queries. This enhancement significantly increased the search flexibility
+    without compromising performance or security.
+}
+\cvlistitem{
+    Implemented a system that facilitates the tracking of industries, facilitating
+    the tracking and trend analysis of clients and companies by specific sectors.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+
+\begin{enumerate}
+    \item \textbf{Ozren Dabić}, Emad Aghajani and Gabriele Bavota.
+    Sampling Projects in GitHub for MSR Studies. In 18th IEEE/ACM International
+    Conference on Mining Software Repositories, MSR 2021, pages 560-564. IEEE, 2021.
+    \item Rosalia Tufano, \textbf{Ozren Dabić}, Antonio Mastropaolo, Matteo Ciniselli
+    and Gabriele Bavota. Code Review Automation: Strengths and Weaknesses of the State
+    of the Art. IEEE Transactions on Software Engineering, 50(2):338-353, 2024.
+    \item Rosalia Tufano, Antonio Mastropaolo, Federica Pepe, \textbf{Ozren Dabić},
+    Massimiliano Di Penta and Gabriele Bavota. Unveiling ChatGPT's Usage in Open
+    Source Projects: A Mining-based Study. In 21st IEEE/ACM International Conference
+    on Mining Software Repositories, MSR 2024. IEEE, 2024.
+    \item \textbf{Ozren Dabić}, Rosalia Tufano and Gabriele Bavota.
+    SEART Data Hub: Streamlining Large-Scale Source Code Mining and Pre-Processing.
+    In 2024 IEEE International Conference on Software Maintenance and Evolution.
+    IEEE, 2024.
+    \item Rosalia Tufano, Alberto Martin-Lopez, Ahmad Tayeb, \textbf{Ozren Dabić},
+    Sonia Haiduc and Gabriele Bavota. Deep Learning-based Code Reviews:
+    A Paradigm Shift or a Double-Edged Sword? In 47th IEEE/ACM  International
+    Conference on Software Engineering, ICSE 2025. IEEE, 2025.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\cveducationitem{Sep 2020 -- Oct 2022}
+{Master of Science in Software and Data Engineering}
+{USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{9.66}
+
+\cveducationitem{Sep 2017 -- Jun 2020}
+{Bachelor of Science in Computer Science}
+{USI - Università della Svizzera italiana}
+{Lugano, Switzerland}
+{8.25}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Supervising}
+
+\cvsupervisingitem{Spring 2024}
+{A Platform to Mine Large-Scale and High-Quality Datasets for Code Review Automation}
+{Software and Data Engineering Master Thesis}
+{Christelle Rossier}
+
+\cvsupervisingitem{Spring 2023}
+{Sampling Open Source Repositories by Mining Code-related Metrics and Repository Topics}
+{Computer Science Bachelor Thesis}
+{Albert Cerfeda}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\cvskillitem{Prog. Lang}{Kotlin, Java, JavaScript, Python, C, Bash, SASS}
+\cvskillitem{Framewroks}{Spring Boot, Ktor, Express.js, Vue, Bootstrap}
+\cvskillitem{Databases}{MySQL, PostgreSQL, MongoDB}
+\cvskillitem{Automation}{Maven, Gradle, Flyway, Liquibase, GitHub Actions}
+\cvskillitem{Analysis}{Jupyter Notebook, Pandas, Bokeh}
+\cvskillitem{Tools}{Git, Docker, Docker Compose, NGINX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spoken Languages}
+\cvlanguagedoubleitem{English}{C2}{Serbian}{C2}
+\cvlanguagedoubleitem{German}{B2}{Italian}{A1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References}
+\cvreference{Prof. Dr. Gabriele Bavota}
+{Head of SEART}
+{inf.usi.ch/faculty/bavota}
+{gabriele.bavota@usi.ch}
+
+\end{document}
